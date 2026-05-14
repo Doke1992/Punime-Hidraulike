@@ -69,6 +69,7 @@ export default function Hero() {
 
           <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight mb-3">
             Hidrauliku Im <span className="text-[#00AEEF]">Tiranë</span>
+            <span className="sr-only"> — Hidraulik në Tiranë për riparime, instalime dhe emergjenca 24/7</span>
           </h1>
 
           <p className="text-base md:text-lg text-white/90 mb-2 font-medium italic">

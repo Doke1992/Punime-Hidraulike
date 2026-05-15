@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { PHONE, EMAIL, ADDRESS } from '../data/contact';
 
 export default function Footer() {
@@ -20,11 +21,12 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white text-base mb-4">Shërbimet</h4>
             <ul className="space-y-2 text-white/70 text-sm">
-              {['Riparime urgjente', 'Zhbllokime', 'Instalime sanitare', 'Ngrohje në dysheme', 'Ndërrim tubacionesh', 'Bojler & Ngrohje'].map((s) => (
-                <li key={s}>
-                  <a href="#sherbimet" className="hover:text-white transition-colors">{s}</a>
-                </li>
-              ))}
+              <li><Link to="/hidraulik-tirane" className="hover:text-white transition-colors">Hidraulik në Tiranë</Link></li>
+              <li><Link to="/riparime-hidraulike-tirane" className="hover:text-white transition-colors">Riparime hidraulike</Link></li>
+              <li><Link to="/instalime-hidraulike-tirane" className="hover:text-white transition-colors">Instalime hidraulike</Link></li>
+              <li><Link to="/zhbllokim-tubacionesh-tirane" className="hover:text-white transition-colors">Zhbllokim tubacionesh</Link></li>
+              <li><Link to="/hidraulik-24-7-tirane" className="hover:text-white transition-colors">Hidraulik 24/7</Link></li>
+              <li><a href="/#sherbimet" className="hover:text-white transition-colors">Të gjitha shërbimet</a></li>
             </ul>
           </div>
 

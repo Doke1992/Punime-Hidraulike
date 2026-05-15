@@ -146,11 +146,17 @@ function createICO(pngBuf, w, h) {
 }
 
 // ── Generate files ────────────────────────────────────────────────────────────
-// 32x32 → favicon.ico
+// 32x32 → favicon.ico (universal browser fallback)
 const rgba32 = drawIcon(32);
 const png32  = encodePNG(32, 32, rgba32);
 writeFileSync(join(PUBLIC, 'favicon.ico'), createICO(png32, 32, 32));
 console.log('✓ favicon.ico  (32×32)');
+
+// 96x96 → favicon-96.png (Google Search requires multiples of 48px)
+const rgba96 = drawIcon(96);
+const png96  = encodePNG(96, 96, rgba96);
+writeFileSync(join(PUBLIC, 'favicon-96.png'), png96);
+console.log('✓ favicon-96.png  (96×96 for Google Search)');
 
 // 180x180 → favicon.png (apple-touch-icon)
 const rgba180 = drawIcon(180);
